@@ -13,4 +13,6 @@ vi c/dosbox.conf
 ```
 ## Credits
 
+Microsoft releases GWbasic source code: https://devblogs.microsoft.com/commandline/microsoft-open-sources-gw-basic/
+
 Dosbox build taken from https://github.com/h6w/dosbox-docker
