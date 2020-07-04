@@ -6,7 +6,6 @@ ADD [ "dosbox-0.74-3.tar.gz", "/build/" ]
 RUN mkdir -p /dosbox && cd /build/dosbox-0.74-3 && ./configure --prefix=/usr && make -j$(nproc) && make install
 RUN apk del build-base sdl-dev linux-headers && rm -R /build
 
-COPY gwbasic/* /c/
 ADD entrypoint /usr/local/bin
 RUN chmod a+x /usr/local/bin/entrypoint
 

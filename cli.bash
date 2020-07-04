@@ -8,7 +8,7 @@ docker run							\
 	-v /dev/log:/dev/log 					\
 	-v /tmp/.X11-unix:/tmp/.X11-unix:ro			\
 	-v /dev/shm:/dev/shm					\
-	-v $HOME/dosbox:/dosbox					\
+	-v $(pwd)/c:/c						\
 	--env=DISPLAY=unix$DISPLAY 				\
 	--name gwbasic						\
 	--entrypoint=/bin/sh 					\
