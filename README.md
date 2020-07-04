@@ -1,13 +1,14 @@
 # GWBasic in a docker container
 
-https://hub.docker.com/r/rodolfoap/gwbasic
+Find the container here: https://hub.docker.com/r/rodolfoap/gwbasic
 
 ## Usage
 
-Get the container, tweak the `c/dosbox.conf` file according to your taste. Then run dosbox:
+Get the repository (mandatory, the gwbasic binary is located there), tweak the `c/dosbox.conf` file according to your taste. Then launch dosbox:
 
 ```
-docker pull rodolfoap/gwbasic
+git clone https://github.com/rodolfoap/gwbasic.git
+vi c/dosbox.conf
 ./launch.bash
 ```
 ## Credits
