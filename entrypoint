@@ -1,8 +1,5 @@
-#!/bin/bash
-set -e
+#!/bin/sh
+set -x
 
-CMD=${1:-dosbox}
-
-exec $CMD
-
+/usr/bin/dosbox -conf /c/dosbox.conf
 exit 0

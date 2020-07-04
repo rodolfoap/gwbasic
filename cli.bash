@@ -1,8 +1,15 @@
 #!/bin/bash
 . VERSION
-docker run						\
-	--rm -it 					\
-	-v /dev/log:/dev/log 				\
-	--name debian10-infra				\
-	--entrypoint=/bin/bash 				\
+export USER_UID=$(id -u)
+export USER_GID=$(id -g)
+xhost +local:docker
+docker run							\
+	--rm -it 						\
+	-v /dev/log:/dev/log 					\
+	-v /tmp/.X11-unix:/tmp/.X11-unix:ro			\
+	-v /dev/shm:/dev/shm					\
+	-v $HOME/dosbox:/dosbox					\
+	--env=DISPLAY=unix$DISPLAY 				\
+	--name gwbasic						\
+	--entrypoint=/bin/sh 					\
 	rodolfoap/gwbasic:${VERSION}

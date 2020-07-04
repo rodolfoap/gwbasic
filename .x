@@ -1,5 +1,5 @@
 execute(){
-	./cli.bash
+	./launch.bash
 }
 build(){
 	./build.bash
@@ -9,11 +9,12 @@ case "$1" in
 		build
 	;;
 	e)
-		vi -p Dockerfile build.bash cli.bash
+		vi -p gwbasic/dosbox.conf Dockerfile build.bash cli.bash
 		build
 		execute
 	;;
 	"")
+		build
 		execute
 	;;
 esac
