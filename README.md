@@ -9,8 +9,6 @@ Just launch the container using the `launch.bash` command:
 ```
 #!/bin/bash
 . VERSION
-export USER_UID=$(id -u)
-export USER_GID=$(id -g)
 xhost +local:docker
 docker run							\
 	--rm -it 						\
