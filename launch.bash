@@ -9,6 +9,7 @@ docker run							\
 	-v /tmp/.X11-unix:/tmp/.X11-unix:ro			\
 	-v /dev/shm:/dev/shm					\
 	-v $(pwd)/c:/c						\
+	-p 8888:80/tcp						\
 	--env=DISPLAY=unix$DISPLAY 				\
 	--name gwbasic						\
 	rodolfoap/gwbasic:${VERSION}

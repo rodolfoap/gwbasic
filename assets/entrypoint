@@ -1,5 +1,9 @@
 #!/bin/sh
-set -x
+
+mkdir -p /run/openrc
+mkdir -p /run/nginx
+touch /run/openrc/softlevel
+nginx
 
 [ -f /c/gwbasic.exe ] || cp -v /usr/local/bin/gwbasic.exe /c/
 [ -f /c/dosbox.conf ] || cp -v /usr/local/bin/dosbox.conf /c/
