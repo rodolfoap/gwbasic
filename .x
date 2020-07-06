@@ -9,7 +9,7 @@ case "$1" in
 		build
 	;;
 	e)
-		vi -p gwbasic/dosbox.conf Dockerfile build.bash cli.bash
+		vi -p Dockerfile assets/entrypoint c/dosbox.conf build.bash cli.bash
 		build
 		execute
 	;;

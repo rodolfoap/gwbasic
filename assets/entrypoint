@@ -1,0 +1,7 @@
+#!/bin/sh
+set -x
+
+[ -f /c/gwbasic.exe ] || cp -v /usr/local/bin/gwbasic.exe /c/
+[ -f /c/dosbox.conf ] || cp -v /usr/local/bin/dosbox.conf /c/
+/usr/bin/dosbox -conf /c/dosbox.conf
+exit 0
