@@ -10,7 +10,7 @@ docker run							\
 	-v /dev/shm:/dev/shm					\
 	-v $(pwd)/c:/c						\
 	-p 8888:80/tcp						\
-	--env=DISPLAY=unix$DISPLAY 				\
+	-e DISPLAY=unix$DISPLAY 				\
+	--ipc=host						\
 	--name gwbasic						\
 	rodolfoap/gwbasic:${VERSION}
-
