@@ -1,0 +1,72 @@
+-a
+07BE:0100 jmp 112
+07BE:0102 db 'Hello, World!',0a,0d,'$'
+07BE:0112 mov ah,9
+07BE:0114 mov dx,102
+07BE:0117 int 21
+07BE:0119 ret
+07BE:011A
+-r cx
+CX 0000  :11A
+-n hello.com
+-w
+Writing 011A bytes.
+-q
+
+C:\>hello.com
+Hello, World!
+
+C:\>debug hello.com
+-d 0100
+07D2:0100  EB 10 48 65 6C 6C 6F 2C-20 57 6F 72 6C 64 21 0A   ..Hello, World!.
+07D2:0110  0D 24 B4 09 BA 02 01 CD-21 C3 74 03 E9 11 FD 83   .$......!.t.....
+07D2:0120  7E F4 00 74 1F 8B 04 40-89 04 0B C0 7D 0E 8B 5C   ~..t...@....}..\
+07D2:0130  0A FF 44 0A B0 1A 88 07-B4 00 EB 08 56 6A 1A E8   ..D.........Vj..
+07D2:0140  75 7C 59 59 56 E8 10 76-59 83 7E EE 00 74 0F 8D   u|YYV..vY.~..t..
+07D2:0150  46 EA 50 8A 44 04 B4 00-50 E8 97 92 59 59 8B 44   F.P.D...P...YY.D
+07D2:0160  02 25 10 00 89 46 F6 56-E8 75 75 59 83 7E F6 00   .%...F.V.uuY.~..
+07D2:0170  74 19 8D 86 BC FD 50 E8-29 72 59 8D 86 BC FD 50   t.....P.)rY....P
+-u
+07D2:0100 EB10          JMP     0112
+07D2:0102 48            DEC     AX
+07D2:0103 65            SEG     GS (unused)
+07D2:0104 6C            INSB
+07D2:0105 6C            INSB
+07D2:0106 6F            OUTSW
+07D2:0107 2C20          SUB     AL,20
+07D2:0109 57            PUSH    DI
+07D2:010A 6F            OUTSW
+07D2:010B 726C          JB      0179
+07D2:010D 64210A        AND     FS:[BP+SI],CX
+07D2:0110 0D24B4        OR      AX,B424
+07D2:0113 09BA0201      OR      [BP+SI+0102],DI
+07D2:0117 CD21          INT     21
+07D2:0119 C3            RET
+07D2:011A 7403          JZ      011F
+07D2:011C E911FD        JMP     FE30
+07D2:011F 837EF400      CMP     WORD PTR [BP-0C],+00
+-g
+Hello, World!
+Program terminated normally.
+
+C:\>debug hello.com
+-t
+AX=0000  BX=0000  CX=011A  DX=0000  SP=FFFE  BP=0000  SI=0000  DI=0000
+DS=07D2  ES=07D2  SS=07D2  CS=07D2  IP=0112   NV UP DI PL NZ NA PO NC
+07D2:0112 B409          MOV     AH,09
+-t
+AX=0900  BX=0000  CX=011A  DX=0000  SP=FFFE  BP=0000  SI=0000  DI=0000
+DS=07D2  ES=07D2  SS=07D2  CS=07D2  IP=0114   NV UP DI PL NZ NA PO NC
+07D2:0114 BA0201        MOV     DX,0102
+-t
+AX=0900  BX=0000  CX=011A  DX=0102  SP=FFFE  BP=0000  SI=0000  DI=0000
+DS=07D2  ES=07D2  SS=07D2  CS=07D2  IP=0117   NV UP DI PL NZ NA PO NC
+07D2:0117 CD21          INT     21
+-t
+Hello, World!
+AX=0924  BX=0000  CX=011A  DX=0102  SP=0000  BP=0000  SI=0000  DI=0000
+DS=07D2  ES=07D2  SS=07D2  CS=07D2  IP=0000   NV UP DI PL NZ NA PO NC
+07D2:0000 CD20          INT     20
+-t
+Program terminated normally.
+
