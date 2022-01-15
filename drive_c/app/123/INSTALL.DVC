@@ -1,0 +1,437 @@
+##B **00-01
+
+##Y one
+{
+ &&vgas &&vgal !!SIB0VGAS-SIB1VGAS
+ &&vga43s &&vga43l !!SIB0V43S-SIB1VGAS
+ &&vga50s &&vga50l !!SIB0V50S-SIB1VGAS
+ &&egas &&egal !!SIBM0EGT-SIBM1EGT
+ &&ega43s &&ega43l !!SIB0E43S-SIBM1EGT
+ &&mcgacs &&mcgacl !!SIB0MGAS-SIB1MGAS
+ &&mcgams &&mcgaml !!SIB0MGS-SIB1MGAS
+ &&ibms &&ibmtl !!SIBM0COL-SIBM1MRT
+ &&colcs &&colcl !!SIBM0B&W-SIBM1HRT
+ &&hercs &&herctl !!SIBM0HER-SIBM1HET
+ &&herss &&herlad !!SIBM0H1B-SIBM1H1S
+ &&hersn &&hersnd !!SHE0C92C-SHE1C92C
+ &&hersnn &&hersndn !!SHE0C93C-SHE1C93C
+ &&toshtt &&toshtlt !!STO031S-STO1PHRS
+ &&tosh50t &&tosht50g !!STO0P50L-STO1PHRS
+ &&tosht &&toshtl !!STO011S-STO111S
+ &&comps &&comptl !!SIBM0CPQ-SIBM1HRT
+ &&compc &&comptc !!SIBM0COL-SIBM1MRT
+ &&attb &&atttl !!SIBM0B&W-SATT1HRT
+ &&attc &&atttcl !!SIBM0COL-SIBM1MRT
+ &&lcds &&lcdl !!SLAP0-SLAP1HRT
+ &&cols &&coll !!SLAP0COL-SIBM1MRT
+ &&singcs &&singcl !!SLAP0BW-SIBM1HRT
+ &&gridt &&gridtl !!SGC0S-SGC1S
+}
+
+##Y dual
+{ 
+ &&vgaduals &&vgaduall !!SIB0VGAS-SIB1VGAD
+ &&egaduals &&egaduall !!SIBM0EGT-SIBM1EGD
+ &&lcdsings &&lcdsingl !!SLAP0-SIBM1HRD
+ &&lcdcols &&lcdcoll !!SLAP0-SIBM1MRD
+ &&ibms &&duall !!SIBM0MON-SIBM1MRD
+}
+
+
+***************** SHORT PROMPTS ************
+
+&&vgas
+{
+IBM/Compaq Video Graphics (VGA 80 x 25)
+}
+&&vga43s
+{
+IBM/Compaq Video Graphics (VGA 80 x 43)
+}
+&&vga50s
+{
+IBM/Compaq Video Graphics (VGA 80 x 50)
+}
+&&mcgacs
+{
+IBM Multi-Color (MCGA) Color
+}
+&&mcgams
+{
+IBM Multi-Color (MCGA) Monochrome
+}
+&&egas
+{
+IBM/Compaq Enhanced Graphics (EGA 80 x 25)
+}
+&&ega43s
+{
+IBM/Compaq Enhanced Graphics (EGA 80 x 43)
+}
+&&colcs
+{
+IBM color card, single-color monitor
+}
+&&hercs
+{
+Hercules Graphics card (80 x 25)
+}
+&&herss
+{
+Hercules Graphics card (90 x 38)
+}
+&&hersn
+{
+Hercules RamFont - Combined (90 x 25)
+}
+&&hersnn
+{
+Hercules RamFont - Combined (90 x 38)
+}
+&&ibms
+{
+IBM color card, color monitor
+}
+&&tosht
+{
+Toshiba T1100 Plus and T1200
+}
+&&toshtt
+{
+Toshiba T3100/T3200/T5100 (80 x 25)
+}
+&&tosh50t
+{
+Toshiba T3100/T3200/T5100 (80 x 50)
+}
+&&comps
+{
+Compaq, single-color monitor
+}
+&&compc
+{
+Compaq, color monitor
+}
+&&attc
+{
+AT&T 6300, color monitor
+}
+&&attb
+{
+AT&T 6300, single-color monitor
+}
+&&lcds
+{
+IBM PC Convertible - LCD only
+}
+&&singcs
+{
+IBM PC Convertible - Ext. single-color
+}
+&&cols
+{
+IBM PC Convertible - w/ color monitor
+}
+&&gridt
+{
+GRiDCase Series
+}
+&&vgaduals
+{
+IBM/Compaq Video Graphics (VGA 80 x 25)
+}
+&&egaduals
+{
+IBM/Compaq Enhanced Graphics (EGA 80 x 25)
+}
+&&lcdsings
+{
+IBM PC Convertible - Ext. single-color
+}
+&&lcdcols
+{
+IBM PC Convertible - w/ color monitor
+}
+ ************* LONG PROMPTS ****************
+
+&&vgal
+{
+Select this if you want to use
+a color or single-color
+(monochrome) monitor
+with an IBM or Compaq Video
+Graphics Adapter (VGA) to
+display text and graphs,
+and you want a standard
+80 x 25 screen display.
+}
+&&vga43l
+{
+Select this if you want to use
+a color or single-color
+(monochrome) monitor with an
+IBM or Compaq Video Graphics
+Adapter (VGA) to display text
+and graphs, and you want to
+see more of the 1-2-3 work
+area than you can with the
+80 x 25 option. Characters,
+however, will be smaller than
+normal.
+}
+&&vga50l
+{
+Select this if you want to use
+a color or single-color
+(monochrome) monitor with an
+IBM or Compaq Video Graphics
+Adapter (VGA) to display text
+and graphs, and you want to
+see more of the 1-2-3 work
+area than you can with either
+the 80 x 25 or 80 x 43 option.
+Characters, however, will be
+smaller than normal.
+}
+&&mcgacl
+{
+Select this if you want to use
+a color monitor with an IBM
+PS/2 Multi-Color Graphics
+Adapter (MCGA) to display
+text and graphs.  Text will
+be displayed in color, but
+graphs will not.
+}
+&&mcgaml
+{
+Select this if you want to use 
+a single-color (monochrome)
+monitor with an IBM PS/2
+Multi-Color Graphics Adapter
+(MCGA) to display text and
+graphs.
+}
+&&egal
+{
+Select this if you want to use
+a color monitor with an IBM
+or Compaq Enhanced Graphics
+Adapter (EGA) to display
+text and graphs, and you want
+a standard 80 x 25 screen
+display.
+}
+&&ega43l
+{
+Select this if you want to use
+a color monitor with an IBM
+or Compaq Enhanced Graphics
+Adapter (EGA) to display
+text and graphs, and you want
+to see more of the 1-2-3
+work area than you can with
+the 80 x 25 option.
+Characters, however, will be
+smaller than normal.
+}
+&&ibmtl
+{
+Select this if you want to use
+a color monitor with an IBM
+color card to display text
+and graphs.
+}
+&&colcl
+{
+Select this if you want to use
+a single-color graphics
+monitor (monochrome) with an
+IBM color card to display
+text and graphs.
+}
+&&herctl
+{
+Select this if you want to use
+a single-color (monochrome)
+monitor with a Hercules
+graphics card to display text
+and graphs, and you want a
+standard 80 x 25 screen
+display.
+}
+&&herlad
+{
+Select this if you want to use
+a single-color (monochrome)
+monitor with a Hercules card
+to display text and graphs,
+and you want to see more of
+the 1-2-3 work area than you
+can with the 80 x 25 option.
+Characters, however, will be
+smaller than normal.
+}
+&&comptl
+{
+Select this if you want to use
+a Compaq computer with a
+single-color (monochrome)
+monitor to display text and
+graphs, and you want a
+standard 80 x 25 screen
+display.
+}
+&&comptc
+{
+Select this if you want to use
+a Compaq computer with a color
+monitor to display text and
+graphs, and you want a
+standard 80 x 25 screen
+display.
+}
+&&atttl
+{
+Select this if you want to use
+a single-color (monochrome) 
+monitor with an AT&T 6300 to
+display text and graphs, and
+you want a standard 80 x 25
+screen display.
+}
+&&atttcl
+{
+Select this if you want to use
+a color monitor with an AT&T
+6300 to display text and
+graphs, and you want a
+standard 80 x 25 screen
+display.
+}
+&&lcdl
+{
+Select this if you want to use
+a PC Convertible liquid
+crystal display (LCD) screen
+to display text and graphs.
+}
+&&singcl
+{
+Select this if you want to use 
+a PC Convertible with a
+single-color (monochrome)
+external monitor.  Only 
+the external monitor will be
+used to display text and
+graphs.
+}
+&&coll
+{
+Select this if you want to use
+a PC Convertible with a color
+external monitor.  Only the 
+external monitor will be used
+to display text and graphs.
+}
+&&gridtl
+{
+Select this if you want to use
+a GRiDCase 2 or 3 to display
+text and graphs.
+}
+&&toshtl
+{
+Select this if you want to use
+the Toshiba T1100 Plus or
+T1200 to display text and
+graphs.
+}
+&&toshtlt
+{
+Select this if you want to use
+the Toshiba T3100/T3200
+or T5100 to display text and
+graphs, and you want a
+standard 80 x 25 screen
+display.
+}
+&&tosht50g
+{
+Select this if you want to use
+the Toshiba T3100/T3200 or
+T5100 to display text and
+graphs, and you want to see
+more of the 1-2-3 work area
+than you can with the 80 x 25
+option. Characters, however
+will be smaller than normal.
+}
+&&hersnd
+{
+Select this if you want to use
+a color monitor with a
+Hercules InColor card or a
+single-color (monochrome)
+monitor with a Hercules
+Graphics Card Plus to display
+text and graphs, and you want
+a standard 90 x 25 screen
+display.
+}
+&&hersndn
+{
+Select this if you want to use
+a color monitor with a
+Hercules InColor card or a 
+monochrome monitor with a
+Hercules Graphics Card Plus to
+display text and graphs, and
+you want to see more of the
+1-2-3 work area than you can
+with the 90 x 25 option.
+Characters, however, will be
+smaller than normal.
+}
+&&duall
+{
+Select this if the monitor you
+want to use to display graphs
+has an IBM color graphics
+card.
+}
+&&vgaduall
+{
+Select this if the monitor you
+want to use to display graphs
+has a Video Graphics Adapter
+(VGA).
+}
+&&egaduall
+{
+Select this if the monitor you
+want to use to display graphs
+has an Enhanced Graphics
+Adapter (EGA).
+}
+&&lcdsingl
+{
+Select this if you want to use 
+a PC Convertible liquid
+crystal display (LCD) screen 
+to display text and a single-
+color (monochrome) external
+monitor to display graphs.
+}
+&&lcdcoll
+{
+Select this if you want to use 
+a PC Convertible liquid
+crystal display (LCD) screen
+to display text and a color 
+external monitor to display
+graphs.
+}
+##E **00-01
+
+
