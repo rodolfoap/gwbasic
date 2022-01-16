@@ -1,6 +1,6 @@
 @echo off
 rem autoexec.bat for DOSEMU + FreeDOS
-path z:\bin;z:\gnu;z:\dosemu;c:\bin
+path z:\bin;c:\dos;z:\gnu;z:\dosemu;c:\app\nc
 set HELPPATH=z:\help
 set TEMP=c:\tmp
 blaster
@@ -17,5 +17,6 @@ rem mode con codepage select 850
 rem chcp 850
 lredir e: linux\fs/media/cdrom c
 unix -s DOSEMU_VERSION
-echo "Welcome to dosemu %DOSEMU_VERSION%!"
+rem echo "Welcome to dosemu %DOSEMU_VERSION%!"
 unix -e
+cls
